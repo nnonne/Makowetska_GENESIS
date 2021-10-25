@@ -1,0 +1,15 @@
+1)
+select id from product.users where users.gender = 'm' and lang != 'ru' and lang != 'es' or users.gender = 'f' and lang = 'ru' and app = 'desktop'
+2)
+select count(user_id) from product.user_session_end where session_number = 1
+select count(id) from product.users
+3)
+select count(user_id)  from product.user_session_end where session_number = 3
+select count(id) from product.users
+4)
+select count(user_id) from product.user_session_end where session_number != 0
+select count(id) from product.users
+5)
+select count(user_id) from product.user_session_end where session_number = 3
+select count(id) from product.users
+select id,gender,app from product.users where id is (select user_id from product.user_session_end where session_number = 3)
